@@ -9,7 +9,7 @@ Configurable npm module for asynchronous breadth-first-search action. Supports a
 
 ### Overview
 
-AsyncBFS allows you to automatically "recurse" on resolved promises, using the value of the resolved promise as input for the next promise. This recursion will continue until the maximum depth or maximum number of resolved promises is reached. AsyncBFS also supports a custom "short-circuiting" function that will stop the recursion at a specific point.
+AsyncBFS allows you to automatically "recurse" on resolved promises, using the value of resolved promises to create additional promises. This recursion will continue until the maximum depth or maximum number of resolved promises is reached. AsyncBFS also supports a custom "short-circuiting" function that will stop the recursion at a specific point.
 
 A major aspect of AsyncBFS is that **you** control what to requeue. When promises are resolved, the functions you provide are called to determine whether to recurse and which promises to fire next. In that respect, AsyncBFS follows the [inversion of control](https://en.wikipedia.org/wiki/Inversion_of_control) principle.
 
