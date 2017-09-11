@@ -23,6 +23,12 @@ As a more concrete example, I personally used AsyncBFS for graph data generation
 
 ### Basic setup
 
+#### Import
+
+```
+import AsyncQueue from 'asyncbfs';
+```
+
 #### Initialization
 
 The constructor for this module is AsyncQueue. It can accept different configuration parameters. At the very least, you must supply a **single number argument** corresponding to the maximum depth:

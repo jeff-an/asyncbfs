@@ -72,11 +72,11 @@ describe('should test optional logging function parameters:', () => {
                 return obj;
             }
         });
-        mockAsync(configObj).then((data) => {
+        mockAsync1(configObj).then((data) => {
             console.log(data);
             expect(Object.keys(data).length).toEqual(3);
-            expect(Object.keys(data.transformedDataMap).length).toEqual(4); // 3 depth + 1 to start
-            [1, 2, 3, 4].forEach(e => expect(data.transformedDataMap[e]).toEqual(parseInt(e) - 2));
+            expect(Object.keys(data.requeueTermsMap).length).toEqual(3); // 3 depth + 1 to start - 1 because the last item is not requeued
+            [2, 4, 6].forEach(e => expect(data.requeueTermsMap[e]).toEqual(parseInt(e) - 2));
         });
     });
 });
