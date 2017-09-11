@@ -1,6 +1,6 @@
 {
   "name": "asyncbfs",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A jQuery extension supporting asynchronous breadth-first-search action. Outputs are used as inputs for further BFS action until a specified condition is met (usually max depth or number of results).",
   "main": "src/AsyncQueue.js",
   "scripts": {
